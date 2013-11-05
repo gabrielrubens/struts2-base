@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- Define o local dos JSPs -->
+	<constant name="struts.convention.result.path" value="/WEB-INF/jsp/" />
+	
+	<package name="br.com.gabrielrubens.base" extends="struts-default"
+		namespace="/">
+		<!-- Se o login for um interceptor 
+		<interceptors>
+			<interceptor name="login" class="loginInterceptor" />
+		</interceptors> -->
+
+		<!-- <default-interceptor-ref name="secureStack" /> -->
+		
+		<!-- Se o result for 'erro' vai para: -->
+		<global-results>
+		<result name="error">error/error.jsp</result>
+			<!-- <result name="error" type="redirectAction">
+				<param name="actionName">error</param>
+				<param name="namespace">/</param>
+			</result> -->
+		</global-results>
+	</package>
+</struts>
